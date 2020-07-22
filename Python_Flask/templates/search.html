@@ -1,0 +1,43 @@
+{% extends "layout.html"%}
+
+
+{% block body %}
+<div class="container">
+
+    <div class="row">
+
+        <div class="col md-12">
+            <h2>DONARS LIST</h2>
+            <table class="table table-striped">
+                <tr>
+              <th>Name</th>
+              <th>DOB</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Blood Group</th>
+              <th>Last Donate</th>
+              <th>Date</th>
+              <th>Action</th>
+          </tr>
+                {% for row in donar %}
+                <tr>
+                    <td>{{row.0}}</td>
+                    <td>{{row.1}}</td>
+                    <td>{{row.2}}</td>
+                    <td>{{row.3}}</td>
+                    <td>{{row.4}}</td>
+                    <td>{{row.5}}</td>
+                    <td>{{row.6}}</td>
+                    <td>
+                <a href="/delete/{{ row.0 }}" class="btn btn-danger btn-xs" onclick="return confirm('Are You Sure For Delete?')">Delete</a>
+                    </td>
+                </tr>
+      </div>
+   </div>
+</div>
+                {% endfor  %}
+            </table>
+        </div>
+{% endblock %}
+<script type="text/javascript" src="{{url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+<script type="text/javascript" src="{{url_for('static', filename = 'js/bootstrap.min.js')}}"></script>

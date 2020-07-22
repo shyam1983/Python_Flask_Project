@@ -1,0 +1,38 @@
+{%extends "layout.html" %}
+{%block body%}
+
+<div class="container">
+    <h2>DONATE BLOOD</h2>
+    <form action="" method="POST">
+        <div class="form-group">
+           FULLNAME<input type ="text" name="name" class= "form-control" palceholder="fullname" required>
+         </div>
+         <div class="form-group">
+            DOB<input type ="date" name="dob" class= "form-control" palceholder="dob" required>
+           </div>
+         <div class="form-group">
+          E-MAIL ID<input type ="text" name="email" class= "form-control" palceholder="emailid" required>
+         </div>
+         <div class="form-group">
+            MOBILE NUMBER<input type ="number" name="phone" class= "form-control" palceholder="mobile_number." required>
+         </div>
+         <div class="form-group">
+            BLOOD GROUP<input type ="text" name="blood" class= "form-control" palceholder="blood_group" required>
+         </div>
+         <div class="form-group">
+            LAST TIME BLOOD DONATED<input type ="date" name="lastbld" class= "form-control" palceholder="lastbld" required>
+           </div>
+         <input class="btn btn-primary" type ="submit"></input>
+    </form>
+</div>
+
+{%endblock%}
+
+
+
+
+
+
+
+
+
